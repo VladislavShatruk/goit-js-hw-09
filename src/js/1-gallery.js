@@ -1,3 +1,5 @@
+const { default: simpleLightbox } = require("simplelightbox");
+
 const images = [
     {
       preview:
@@ -65,4 +67,4 @@ const images = [
 ];
 
 
-
+import simpleLightbox from "simplelightbox";
