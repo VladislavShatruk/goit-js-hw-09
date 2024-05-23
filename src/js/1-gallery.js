@@ -1,4 +1,8 @@
-const { default: simpleLightbox } = require("simplelightbox");
+
+import SimpleLightbox from "simplelightbox";
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+
 
 const images = [
     {
@@ -66,5 +70,27 @@ const images = [
     },
 ];
 
+const containerGalery = document.querySelector('.gallery');
+containerGalery.insertAdjacentHTML('beforeend', createMarkup(images));
 
-import simpleLightbox from "simplelightbox";
+function createMarkup(arr) {
+  return arr
+  .map(
+    img=> `
+    <li class= 'gallery-item'>
+      <a class= 'gallery-link' href ='${img.original}'>
+        <img
+          class= 'gallery-img'
+          src= '${img.preview}'
+          alt= '${img.description}'
+          />
+      </a>
+    </li>
+    `
+  ).join('');
+}
+
+const gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
