@@ -22,3 +22,20 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
+
+
+.home-link {
+  padding: 16px;
+}
+
+.home-link h1 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.home-link ul li {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
